@@ -234,7 +234,7 @@ contract MyEpicGame is ERC721 {
         // Get the tokenId of the user's character NFT
         uint256 userNftTokenId = nftHolders[msg.sender];
         // If the user has a tokenId in the map, return their character.
-        if (userNftTokenId < 0) {
+        if (userNftTokenId > 0) {
             return nftHolderAttributes[userNftTokenId];
         } else {
             CharacterAttributes memory emptyStruct;
